@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: #AEC346;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+h2 {
+text-align: center;
+margin-bottom: 15px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    height: 50px;
+    width: 150px;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Estilo do resultado */
+#result {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: rgba(255, 215, 0, 0.2);
+    border-radius: 10px;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* Botão centralizado abaixo dos inputs */
+#generate-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Tema Claro */
+.light-mode {
+    background: #fff;
+    color: #000;
+}
+
+.light-mode input {
+    background: #e0e0e0;
+    color: black;
+    border: 2px solid black;
+}
+
+.light-mode #result {
+    background: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+/* O nome "DevSorteio" fica preto no tema claro */
+.light-mode #logo-text {
+    color: #000;
+    font-size: 100px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    #result {
+        min-width: 100px;
+        font-size: 24px;
+    }
+}
