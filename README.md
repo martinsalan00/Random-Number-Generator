@@ -1,7 +1,6 @@
 <h2>🎲 Sorteador de Números Aleatórios</h2>
 <br>
-🇧🇷 Português | 🇺🇸 English
-🇧🇷 Sorteador de Números Aleatórios – Um Projeto Web Interativo
+Sorteador de Números Aleatórios – Um Projeto Web Interativo
 Olá, devs! 👋 Apresento a vocês um projeto simples, mas repleto de detalhes que melhoram a experiência do usuário. Desenvolvido com HTML, CSS e JavaScript, este sorteador de números aleatórios traz um design moderno e funcionalidades que demonstram boas práticas em desenvolvimento front-end.
 
 🌟 Recursos Principais:
