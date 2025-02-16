@@ -49,11 +49,11 @@ header {
 button {
     background: #AEC346;
     border-radius: 10px;
-    width: 120px;
-    height: 40px;
+    width: 150px;
+    height: 45px;
     color: #ffffff;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
     transition: opacity 0.2s;
@@ -68,8 +68,15 @@ button:active {
 }
 
 h2 {
-text-align: center;
-margin-bottom: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .input-container {
@@ -80,6 +87,7 @@ margin-bottom: 15px;
     margin-bottom: 20px;
 }
 
+/* Estilo dos inputs */
 input {
     background: rgba(255, 255, 255, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -96,17 +104,23 @@ input {
 #result {
     font-size: 30px;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 15px 25px;
     background: rgba(255, 215, 0, 0.2);
     border-radius: 10px;
-    min-width: 80px;
+    min-width: 100px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-/* Botão centralizado abaixo dos inputs */
-#generate-btn {
-    display: block;
-    margin: 0 auto;
+/* Centraliza o botão */
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
 }
 
 /* Tema Claro */
@@ -126,10 +140,8 @@ input {
     color: black;
 }
 
-/* O nome "DevSorteio" fica preto no tema claro */
 .light-mode #logo-text {
     color: #000;
-    font-size: 100px;
 }
 
 /* Responsividade */
@@ -145,18 +157,17 @@ input {
         align-items: center;
     }
 
-    input {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    button {
+    input, button {
         width: 100%;
         max-width: 250px;
     }
 
     #result {
-        min-width: 100px;
+        min-width: 120px;
+        font-size: 26px;
+    }
+
+    #logo-text {
         font-size: 24px;
     }
 }
