@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     themeButton.addEventListener("click", () => {
         document.body.classList.toggle("light-mode");
         themeButton.textContent = document.body.classList.contains("light-mode") ? "☀️" : "🌙";
-
-        // Ajusta a cor do resultado corretamente ao trocar o tema
-        result.style.color = document.body.classList.contains("light-mode") ? "black" : "white";
     });
 
     // Alterna entre português e inglês
@@ -30,18 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
         logoText.textContent = isEnglish ? "DevDraw" : "DevSorteio";
     });
 
-    // Gera um número aleatório com verificações
+    // Gera um número aleatório
     generateButton.addEventListener("click", () => {
-        const min = Math.ceil(Number(minInput.value));
-        const max = Math.floor(Number(maxInput.value));
+        const min = Math.ceil(minInput.value);
+        const max = Math.floor(maxInput.value);
 
         if (isNaN(min) || isNaN(max) || min >= max) {
             result.textContent = isEnglish ? "Invalid" : "Inválido";
-            result.style.color = "red";
             return;
         }
 
-        result.style.color = document.body.classList.contains("light-mode") ? "black" : "white";
         const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
         result.textContent = randomNumber;
     });
