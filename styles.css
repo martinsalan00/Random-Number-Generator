@@ -215,5 +215,6 @@ input {
     .responsive-img {
         max-width: 240px; /* Mantendo o dobro do tamanho */
         height: auto;
+        margin-bottom: 80px;
     }
 }
