@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
         minInput.placeholder = isEnglish ? "From" : "Entre";
         maxInput.placeholder = isEnglish ? "To" : "E";
         generateButton.textContent = isEnglish ? "Draw" : "Sortear";
+        
+        // Atualiza o nome "DevSorteio" para "DevDraw" corretamente
         logoText.textContent = isEnglish ? "DevDraw" : "DevSorteio";
     });
 

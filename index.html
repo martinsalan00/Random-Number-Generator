@@ -11,25 +11,23 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="./img/sort1.png" alt="Logo Sorteador">
-            <p id="logo-text">DevSorteio</p>
+            <img src="./img/sort1.png" alt="Logo Sorteador" class="responsive-img">
+            <p id="logo-text" class="light-only">DevSorteio</p>
         </div>
         <div class="controls">
             <button id="toggle-theme">🌙</button>
-            <button id="toggle-lang">EN</button>
+            <button id="toggle-lang">PT</button>
         </div>
     </header>
 
     <main>
-        <h2 id="title">Sortear um Número</h2>
+        <h2 id="title">Draw a Number</h2>
         <div class="input-container">
-            <input type="number" id="input-min" placeholder="Entre">
+            <input type="number" id="input-min" placeholder="From">
             <p id="result">?</p>
-            <input type="number" id="input-max" placeholder="E">
+            <input type="number" id="input-max" placeholder="To">
         </div>
-        <div class="button-container">
-            <button id="generate-btn">Sortear</button>
-        </div>
+        <button id="generate-btn">Draw</button>
     </main>
 
     <script src="scripts.js" defer></script>

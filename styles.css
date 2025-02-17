@@ -17,18 +17,15 @@ body {
     min-height: 100vh;
     transition: background 0.3s, color 0.3s;
     padding: 20px;
-    text-align: center;
 }
 
-/* ================== HEADER ================== */
 header {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 600px;
     padding: 20px;
-    text-align: center;
 }
 
 .logo-container {
@@ -37,22 +34,39 @@ header {
     align-items: center;
 }
 
+/* Nome "DevSorteio" (só aparece no modo claro e agora está 2.5x maior) */
 #logo-text {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
-    color: #fff;
-    transition: color 0.3s;
-    text-align: center;
+    color: black; /* Cor preta no modo claro */
+    display: none; /* Escondido no modo escuro */
+    transition: font-size 0.3s;
 }
 
-/* ================== CONTROLES ================== */
+/* Somente no modo claro */
+.light-mode #logo-text {
+    display: block;
+    font-size: 100px; /* 2.5x maior que o original (40px * 2.5) */
+}
+
+/* Diminuir tamanho do "DevSorteio" em telas menores */
+@media (max-width: 768px) {
+    .light-mode #logo-text {
+        font-size: 80px; /* Ajuste proporcional */
+    }
+}
+
+@media (max-width: 480px) {
+    .light-mode #logo-text {
+        font-size: 60px; /* Ainda menor para telas pequenas */
+    }
+}
+
 .controls {
     display: flex;
     gap: 10px;
-    margin-top: 10px;
 }
 
-/* ================== BOTÕES ================== */
 button {
     background: #AEC346;
     border-radius: 10px;
@@ -74,20 +88,17 @@ button:active {
     opacity: 0.8;
 }
 
-/* ================== TÍTULO ================== */
 h2 {
     text-align: center;
     margin-bottom: 15px;
 }
 
-/* ================== INPUTS E RESULTADO ================== */
 .input-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
-    flex-wrap: wrap;
 }
 
 input {
@@ -102,6 +113,7 @@ input {
     text-align: center;
 }
 
+/* Estilo do resultado */
 #result {
     font-size: 30px;
     font-weight: bold;
@@ -112,19 +124,13 @@ input {
     text-align: center;
 }
 
-/* ================== BOTÃO CENTRALIZADO ================== */
-.button-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
+/* Botão centralizado abaixo dos inputs */
 #generate-btn {
-    width: 100%;
-    max-width: 250px;
+    display: block;
+    margin: 0 auto;
 }
 
-/* ================== TEMA CLARO ================== */
+/* Tema Claro */
 .light-mode {
     background: #fff;
     color: #000;
@@ -141,8 +147,14 @@ input {
     color: black;
 }
 
-/* ================== RESPONSIVIDADE ================== */
+/* Responsividade */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .input-container {
         flex-direction: column;
         align-items: center;
@@ -161,5 +173,47 @@ input {
     #result {
         min-width: 100px;
         font-size: 24px;
+    }
+}
+
+/* Responsividade melhorada */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-container {
+        align-items: center;
+        text-align: center;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #result {
+        min-width: 100px;
+        font-size: 24px;
+    }
+}
+
+/* Ajuste específico para telas menores que 600px */
+@media (max-width: 600px) {
+    .responsive-img {
+        max-width: 240px; /* Mantendo o dobro do tamanho */
+        height: auto;
     }
 }
